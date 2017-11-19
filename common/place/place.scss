@@ -1,4 +1,4 @@
-.c-station {
+.c-place {
   position: relative;
   margin: $__space-medium ($__space-small * -1) $__space-medium ($__space-small * -2);
   padding: $__space-small;
@@ -32,16 +32,16 @@
     background-color: $__color-neutral-lighter;
   }
 
-  &:hover .c-station__title {
+  &:hover .c-place__title {
     text-decoration: underline;
   }
 }
 
-.c-station__title {
+.c-place__title {
   @include typeset("display3");
 }
 
-.c-station__desc {
+.c-place__desc {
   @include typeset("text");
   display: block;
   margin-top: $__space-xxsmall;
