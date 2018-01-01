@@ -12,8 +12,9 @@ patterns
 ├── shared
 │   ├── fonts          # Web fonts
 │   ├── icons          # Favicon and home screen icons
-│   ├── scripts        # JavaScript files
-│   ├── styles         # CSS files
+│   ├── images         # CSS images
+│   ├── scripts        # JavaScript
+│   ├── styles         # CSS styles
 │   └── vectors        # SVG images
 │
 ├── LICENSE            # Project license
