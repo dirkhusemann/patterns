@@ -17,4 +17,5 @@
             <button class="c-search__button c-search__dismiss" type="button" aria-label="Dismiss search form">✕</button>
         </div>
     </form>
+    <div class="c-search__backdrop"></div>
 </div>

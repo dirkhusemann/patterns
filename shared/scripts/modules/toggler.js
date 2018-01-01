@@ -1,6 +1,7 @@
 export default function (opts) {
-  function Dialog(dialogEl, inertEls) {
+  function Dialog(dialogEl, backdropEl, inertEls) {
     this.dialogEl = dialogEl;
+    this.backdropEl = backdropEl;
     this.inertEls = inertEls;
     this.focusedElBeforeOpen;
 
@@ -18,13 +19,17 @@ export default function (opts) {
     const Dialog = this;
     const inertEls = Dialog.inertEls;
 
+    this.backdropEl.hidden = false;
     this.dialogEl.hidden = false;
     this.dialogEl.setAttribute('aria-hidden', false);
-
     this.focusedElBeforeOpen = document.activeElement;
 
     this.dialogEl.addEventListener('keydown', e => {
       Dialog._handleKeyDown(e);
+    });
+
+    this.backdropEl.addEventListener('click', () => {
+      Dialog.close();
     });
 
     this.firstFocusableEl.focus();
@@ -43,6 +48,7 @@ export default function (opts) {
     const Dialog = this;
     const inertEls = Dialog.inertEls;
 
+    this.backdropEl.hidden = true;
     this.dialogEl.hidden = true;
     this.dialogEl.setAttribute('aria-hidden', true);
 
@@ -119,12 +125,14 @@ export default function (opts) {
   // Options
   const openButton = opts.openWith;
   const dismissButton = opts.dismissWith;
+  const backdrop = opts.backdrop;
   const inertEls = opts.inertEls;
 
   // Set up
   const $ = document.querySelector.bind(document);
   const targetName = $(openButton).getAttribute('aria-controls');
   const targetEl = document.getElementById(targetName);
-  const myDialog = new Dialog(targetEl, inertEls);
+  const backdropEl = document.querySelector(backdrop);
+  const myDialog = new Dialog(targetEl, backdropEl, inertEls);
   myDialog.addEventListeners(openButton, dismissButton);
 }

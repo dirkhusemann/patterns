@@ -9,4 +9,5 @@
     <?php endforeach ?>
     </ul>
     <button class="c-navigation__dismiss" type="button" aria-label="Close menu">✕</button>
+    <div class="c-navigation__backdrop"></div>
 </nav>
