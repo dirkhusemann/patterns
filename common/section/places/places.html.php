@@ -2,7 +2,7 @@
     <?php
         pattern('common/header', [
             'level' => 2,
-            'title' => 'Places',
+            'title' => html::a(page('places')->url(), 'Places'),
             'subtitle' => 'With Maps, Plans of Towns And Pictorial Illustrations',
             'modifiers' => ['index']
         ]);

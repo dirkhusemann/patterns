@@ -9,7 +9,7 @@
   margin-top: auto;
   padding: 1rem var(--page-gutter);
   background-color: $__color-neutral-darkest;
-  color: $__color-neutral-lightest;
+  color: $__color-neutral-lighter;
 }
 
 .c-contentinfo__social {
@@ -30,4 +30,12 @@
   margin-right: auto;
   margin-bottom: $__space-xsmall;
   margin-left: auto;
+
+  a {
+    text-decoration-color: rgba($__color-neutral-lighter, 0.5);
+
+    &:hover {
+      text-decoration-color: rgba($__color-mustard, 0.75);
+    }
+  }
 }

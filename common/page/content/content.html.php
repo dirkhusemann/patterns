@@ -21,10 +21,11 @@
     } else {
         foreach (sections() as $section) {
             $routesCount = count($section['routes']);
-            $continue = brick('p');
+            $continue = '';
 
             if ($routesCount > 0) {
-                $continue->html(html::a($section['url'], $routesCount.' routes'));
+                $continue = brick('p');
+                $continue->html(brick('strong')->html(html::a($section['url'], $routesCount.' routes')));
             }
 
             $title = brick('a');

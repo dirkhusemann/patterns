@@ -5,6 +5,19 @@
   &.c-header--index {
     text-align: center;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: $__color-link-hover;
+    }
+
+    &:active {
+      color: $__color-link-active;
+    }
+  }
 }
 
 .c-header__parent {
