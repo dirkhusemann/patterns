@@ -52,7 +52,7 @@
 }
 
 .c-navigation__dismiss {
-  position: absolute;
+  position: fixed;
   top: $__space-medium;
   right: $__space-medium;
   z-index: $__z-index-modal;
