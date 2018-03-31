@@ -17,6 +17,10 @@ $_card-growth: $__space-xxsmall;
     margin: ($_card-growth * -1);
     padding: $_card-growth;
   }
+
+  .c-page--station & {
+    margin-bottom: $__gutter-y;
+  }
 }
 
 .c-feature__header {
