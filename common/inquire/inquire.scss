@@ -63,6 +63,7 @@
   box-shadow: inset 0 1px 0 $__color-neutral-alpha;
   padding: $__space-small;
   background-color: white;
+  font-size: 1rem; // Prevent form zooming
 
   &:focus {
     @include focus;
