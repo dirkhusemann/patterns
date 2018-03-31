@@ -10,7 +10,7 @@
 }
 
 .c-navigation__items {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   top: $__space-medium;
