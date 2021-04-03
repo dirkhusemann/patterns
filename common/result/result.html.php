@@ -1,7 +1,12 @@
 <article class="c-result">
     <header class="c-result__header">
         <?php
-            $title = html::a($item->url(), $item->title());
+            if ($item->intendedTemplate() == 'station') {
+                $title = $item->title()." Railway Station";
+            } else {
+                $title = $item->title();
+            }
+            $title = html::a($item->url(), $title);
             echo brick('h'.$level)->html($title)->addClass('c-result__title')
         ?>
     </header>

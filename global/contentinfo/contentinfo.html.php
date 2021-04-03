@@ -7,6 +7,13 @@
                 'size' => 24
             ]) ?>
         </a>
+        <a rel="me" href="https://micro.blog/bradshawsguide">
+            <?php pattern('common/icon', [
+                'glyph' => 'microblog',
+                'label' => 'Follow George Bradshaw on Micro.blog',
+                'size' => 24
+            ]) ?>
+        </a>
         <a rel="me" href="https://github.com/bradshawsguide">
             <?php pattern('common/icon', [
                 'glyph' => 'github',

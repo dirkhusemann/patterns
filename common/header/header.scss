@@ -29,6 +29,7 @@
 
 .c-header__title {
   @include typeset("display1");
+  margin-bottom: $__space-xxsmall;
 
   small {
     font-size: 75%;
@@ -50,7 +51,7 @@
   color: $__color-neutral-dark;
 
   .c-header--index & {
-    @include typeset("prose");
+    @include typeset("prose", $line-height: $__line-height-reset);
     font-variant-caps: all-small-caps;
   }
 }

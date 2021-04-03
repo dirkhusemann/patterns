@@ -9,7 +9,7 @@
         <dt><?= smartypants($item['term']) ?></dt>
         <?php endif ?>
         <?php if (isset($item['desc'])): ?>
-        <dd><?= kirbytextraw(smartypants($item['desc'])) ?></dd>
+        <dd><?= smartypants($item['desc']) ?></dd>
         <?php endif ?>
     <?php endforeach ?>
     </dl>
